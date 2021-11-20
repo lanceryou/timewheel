@@ -43,10 +43,10 @@ func (r *rounds) remove(key string) {
 // get run tasks
 func (r *rounds) tasks() (ts []round) {
 	for _, v := range r.roundMap {
-		if v.circle == 0 {
+		v.circle--
+		if v.circle <= 0 {
 			ts = append(ts, v)
 		}
-		v.circle--
 	}
 	return
 }

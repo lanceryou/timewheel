@@ -53,7 +53,7 @@ func TestTimeWheel_Add(t *testing.T) {
 		},
 		{
 			every:     true,
-			expect:    0,
+			expect:    1,
 			timeInter: time.Millisecond * 200,
 			after:     time.Millisecond * 400,
 			ticker:    time.Millisecond * 400,
@@ -62,7 +62,7 @@ func TestTimeWheel_Add(t *testing.T) {
 		{
 			every:     true,
 			runFirst:  true,
-			expect:    1,
+			expect:    2,
 			timeInter: time.Millisecond * 200,
 			after:     time.Millisecond * 400,
 			ticker:    time.Millisecond * 400,
